@@ -1,0 +1,18 @@
+[package]
+name = "subsetter-wasm"
+version = "0.1.0"
+edition = "2021"
+publish = false
+
+[dependencies]
+cargo-component-bindings = "0.6.0"
+subsetter = "=0.1.1"
+
+[lib]
+name = "subsetter"
+crate-type = ["cdylib"]
+
+[package.metadata.component]
+package = "typst-community:subsetter"
+
+[package.metadata.component.dependencies]

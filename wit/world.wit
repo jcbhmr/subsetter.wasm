@@ -1,4 +1,4 @@
-package typst-community:subetter@1.0.01+0.1.1;
+package typst-community:subsetter@1.0.0+0.1.1;
 
 interface types {
   resource profile {
@@ -6,7 +6,7 @@ interface types {
   }
 
   record tag {
-    zero: tuple<u8, u8, u8, u8>,
+    tuple0: tuple<u8, u8, u8, u8>,
   }
 
   variant error {
