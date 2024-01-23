@@ -1,0 +1,26 @@
+package typst-community:subetter@1.0.01+0.1.1;
+
+interface types {
+  resource profile {
+    pdf: static func(glyphs: list<u16>) -> profile;
+  }
+
+  record tag {
+    zero: tuple<u8, u8, u8, u8>,
+  }
+
+  variant error {
+    unknown-kind,
+    invalid-offset,
+    missing-data,
+    invalid-data,
+    missing-table(tag),
+  }
+}
+
+world subsetter {
+  export types;
+  use types.{profile, tag, error};
+
+  export subset: func(data: list<u8>, index: u32, profile: profile) -> result<list<u8>, error>;
+}
