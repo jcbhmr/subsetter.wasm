@@ -7,7 +7,7 @@ impl bindings::Guest for Component {
     fn subset(
         data: Vec<u8>,
         index: u32,
-        profile: types::OwnProfile,
+        profile: bindings::exports::typst_community::subsetter::types::Profile,
     ) -> Result<Vec<u8>, types::Error> {
         todo!()
     }
