@@ -4,11 +4,16 @@ use subsetter;
 
 pub struct Component;
 impl bindings::Guest for Component {
+    // SHOULD BE:
+    // fn subset(data: Vec<u8>, index: u32, profile: types::Profile) -> Result<Vec<u8>, types::Error> {
+    //     todo!()
+    // }
+    // BUT IS:
     fn subset(
         data: Vec<u8>,
         index: u32,
-        profile: bindings::exports::typst_community::subsetter::types::Profile,
-    ) -> Result<Vec<u8>, types::Error> {
+        profile: bindings::typst_community::subsetter::types::Profile,
+    ) -> Result<Vec<u8>, bindings::typst_community::subsetter::types::Error> {
         todo!()
     }
 }
